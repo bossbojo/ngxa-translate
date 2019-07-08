@@ -1,6 +1,6 @@
 <a [routerLink]="['/']" [routerLinkActive]="'active'">{{ 'title.home' | toTranslate  }}</a> |
 <a [routerLink]="['about']" [routerLinkActive]="'active'">{{ 'title.about' | toTranslate  }}</a>
-<router-outlet></router-outlet>
+<router-outlet (activate)="onCheckRouter()"></router-outlet>
 
 <a (click)="onChange('th')">TH </a>
 
