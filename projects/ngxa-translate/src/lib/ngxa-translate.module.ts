@@ -11,9 +11,7 @@ import { NgxaTranslateService, JsonLang } from './ngxa-translate.service';
   exports: [
     NgxaTranslatePipe
   ],
-  providers: [
-    NgxaTranslateService
-  ]
+  providers: []
 })
 export class NgxaTranslateModule {
   static forRoot(config: JsonLang): ModuleWithProviders {
@@ -22,7 +20,7 @@ export class NgxaTranslateModule {
       providers: [{
         provide: JsonLang,
         useValue: config
-      }, NgxaTranslateService]
+      }]
     };
   }
   static forChild(config: JsonLang): ModuleWithProviders {
@@ -31,7 +29,7 @@ export class NgxaTranslateModule {
       providers: [{
         provide: JsonLang,
         useValue: config
-      }, NgxaTranslateService]
+      }]
     };
   }
 }

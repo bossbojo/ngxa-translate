@@ -8,7 +8,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { th } from './i18n/th';
 import { en } from './i18n/en';
 import { kh } from './i18n/kh';
-import { NgxaTranslateModule } from 'projects/ngxa-translate/src/public-api';
+import { NgxaTranslateModule, NgxaTranslateService } from 'projects/ngxa-translate/src/public-api';
 
 
 @NgModule({
@@ -22,6 +22,7 @@ import { NgxaTranslateModule } from 'projects/ngxa-translate/src/public-api';
     NgxaTranslateModule.forRoot({ jsonOject: { th, en, kh } })
   ],
   providers: [
+    NgxaTranslateService
   ],
   bootstrap: [AppComponent]
 })
