@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngxa-translate": [
+        "dist/ngxa-translate"
+      ],
+      "ngxa-translate/*": [
+        "dist/ngxa-translate/*"
+      ]
+    }
   }
 }

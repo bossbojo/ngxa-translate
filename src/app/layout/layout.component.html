@@ -1,0 +1,9 @@
+<a [routerLink]="['/']" [routerLinkActive]="'active'">{{ 'title.home' | toTranslate  }}</a> |
+<a [routerLink]="['about']" [routerLinkActive]="'active'">{{ 'title.about' | toTranslate  }}</a>
+<router-outlet></router-outlet>
+
+<a (click)="onChange('th')">TH </a>
+
+<a (click)="onChange('en')">EN </a>
+
+<a (click)="onChange('kh')">KH </a>

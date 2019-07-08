@@ -134,6 +134,41 @@
           }
         }
       }
+    },
+    "ngxa-translate": {
+      "root": "projects/ngxa-translate",
+      "sourceRoot": "projects/ngxa-translate/src",
+      "projectType": "library",
+      "prefix": "ngxa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngxa-translate/tsconfig.lib.json",
+            "project": "projects/ngxa-translate/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngxa-translate/src/test.ts",
+            "tsConfig": "projects/ngxa-translate/tsconfig.spec.json",
+            "karmaConfig": "projects/ngxa-translate/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngxa-translate/tsconfig.lib.json",
+              "projects/ngxa-translate/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngxa-translate-project"
